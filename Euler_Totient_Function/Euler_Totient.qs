@@ -24,7 +24,7 @@ namespace EulersTotientFunction {
     }
 
     @EntryPoint() // Program execution starts here
-    function PrintEulersTotientFunction() : Unit {
+    function PrintEulersTotientFunction() : Unit { // Reminder: Unit return type is similar to void in C++
         let n = 15; // Set n as immutable variable
         Message($"φ({n}) = {TotientFunction(n)}");
     }
@@ -46,3 +46,5 @@ namespace EulersTotientFunction {
 // 6b) set statements CANNOT be used on immutable variables
 // 7) Tuple deconstruction: allows deconstruction of tuples into components and assign them to separate variables
 // 7a) IE let tuple = (5, false); let (first, second) = tuple; (first = 5, second = false)
+// 8) Transfer-of-control statements, ie break and continue, are NOT supported by Q#
+// 9) return statements can be used at any point in code EXCEPT for when allocated qubits are involved
